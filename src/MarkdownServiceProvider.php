@@ -25,7 +25,7 @@ use Illuminate\View\Engines\CompilerEngine;
 use Laravel\Lumen\Application as LumenApplication;
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\ConfigurableEnvironmentInterface;
-use League\CommonMark\Environment;
+use League\CommonMark\Environment\Environment;
 use League\CommonMark\EnvironmentInterface;
 use League\CommonMark\MarkdownConverterInterface;
 
@@ -60,7 +60,7 @@ class MarkdownServiceProvider extends ServiceProvider
      */
     protected function setupConfig()
     {
-        $source = realpath($raw = __DIR__.'/../config/markdown.php') ?: $raw;
+        $source = realpath($raw = __DIR__ . '/../config/markdown.php') ?: $raw;
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('markdown.php')]);
