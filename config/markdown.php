@@ -1,6 +1,9 @@
 <?php
 
+
 declare(strict_types=1);
+
+use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
 
 /*
  * This file is part of Laravel Markdown.
@@ -64,58 +67,61 @@ return [
         'soft_break'      => "\n",
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Enable Em Tag Parsing
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies if `<em>` parsing is enabled.
-    |
-    | Default: true
-    |
-    */
+    'commonmark' => [
+        /*
+        |--------------------------------------------------------------------------
+        | Enable Em Tag Parsing
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies if `<em>` parsing is enabled.
+        |
+        | Default: true
+        |
+        */
 
-    'enable_em' => true,
+        'enable_em' => true,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Enable Strong Tag Parsing
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies if `<strong>` parsing is enabled.
-    |
-    | Default: true
-    |
-    */
+        /*
+        |--------------------------------------------------------------------------
+        | Enable Strong Tag Parsing
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies if `<strong>` parsing is enabled.
+        |
+        | Default: true
+        |
+        */
 
-    'enable_strong' => true,
+        'enable_strong' => true,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Enable Asterisk Parsing
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies if `*` should be parsed for emphasis.
-    |
-    | Default: true
-    |
-    */
+        /*
+        |--------------------------------------------------------------------------
+        | Enable Asterisk Parsing
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies if `*` should be parsed for emphasis.
+        |
+        | Default: true
+        |
+        */
 
-    'use_asterisk' => true,
+        'use_asterisk' => true,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Enable Underscore Parsing
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies if `_` should be parsed for emphasis.
-    |
-    | Default: true
-    |
-    */
+        /*
+        |--------------------------------------------------------------------------
+        | Enable Underscore Parsing
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies if `_` should be parsed for emphasis.
+        |
+        | Default: true
+        |
+        */
 
-    'use_underscore' => true,
+        'use_underscore' => true,
 
+        'unordered_list_markers' => ['-', '*', '+'],
+    ],
     /*
     |--------------------------------------------------------------------------
     | HTML Input
@@ -153,6 +159,6 @@ return [
     |
     */
 
-    'max_nesting_level' => INF,
+    'max_nesting_level' => PHP_INT_MAX,
 
 ];
