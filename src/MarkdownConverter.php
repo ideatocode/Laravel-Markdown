@@ -23,6 +23,9 @@ class MarkdownConverter extends CommonMarkMarkdownConverter
 
     public function parseDataToHtml($string, $data)
     {
+        if (is_null($string)) {
+            return null;
+        }
 
         $text = preg_replace_callback('/{{\s*(.+?)\s*}}/', function ($matches) use ($data) {
             return data_get($data, $matches[1]);
