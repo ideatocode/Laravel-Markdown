@@ -31,7 +31,7 @@ class MarkdownConverter extends CommonMarkMarkdownConverter
             return data_get($data, $matches[1]);
         }, $string);
 
-        return $this->convertToHtml($text);
+        return $this->convert($text);
     }
     public function parseBladeToHtml($string, $data)
     {
