@@ -1,7 +1,17 @@
 {
     "name": "ideatocode/markdown",
     "description": "Markdown Is A CommonMark Wrapper For Laravel",
-    "keywords": ["laravel", "framework", "markdown", "commonmark", "common mark", "Laravel Markdown", "Laravel-Markdown", "Graham Campbell", "GrahamCampbell"],
+    "keywords": [
+        "laravel",
+        "framework",
+        "markdown",
+        "commonmark",
+        "common mark",
+        "Laravel Markdown",
+        "Laravel-Markdown",
+        "Graham Campbell",
+        "GrahamCampbell"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -12,10 +22,10 @@
     ],
     "require": {
         "php": "^7.2.5 || ^8.0",
-        "illuminate/contracts": "^6.0 || ^7.0 || ^8.0",
-        "illuminate/filesystem": "^6.0 || ^7.0 || ^8.0",
-        "illuminate/support": "^6.0 || ^7.0 || ^8.0",
-        "illuminate/view": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/contracts": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/filesystem": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/view": "^6.0 || ^7.0 || ^8.0 || ^9.0",
         "league/commonmark": "^2.1.1"
     },
     "require-dev": {

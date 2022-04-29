@@ -35,7 +35,7 @@ class MarkdownConverter extends CommonMarkMarkdownConverter
     }
     public function parseBladeToHtml($string, $data)
     {
-        $php = Blade::compileString("@markdown\n" . ($string ?? '') . "\n@endmarkdown");
+        $php = Blade::compileString($string ?? '');
         $rendered = $this->render($php, $data);
         return $rendered;
     }
